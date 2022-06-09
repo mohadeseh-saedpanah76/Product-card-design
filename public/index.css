@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Vazirmatn, sans-serif;
 }
 body{
     display: flex;
@@ -12,9 +13,9 @@ body{
 }
 .card{
     position: relative;
-    width: 50vw;
-    height: 550px;
-    margin: 0 auto;
+    width: 320px;
+    height: 420px;
+    margin: 5rem auto;
     border-radius: 25px;
     background: rgb(233, 243, 255);
     overflow: hidden;
@@ -35,3 +36,58 @@ body{
     top:-70%;
     transform: skewY(390deg);
 }
+.card .imgbox{
+   /* با این پوزیشن تصویر میاد روی کاراکتر ابی رنگ*/
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    z-index: 1;
+}
+.card .imgbox img{
+    max-width: 90%;
+    transition: 0.5s;
+}
+.card:hover .imgbox img{
+    max-width: 70%;
+}
+.card .contentbox{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    z-index: 1;
+
+}
+h2{
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.70);
+}
+.price{
+    font-size: 20px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.70);
+}
+.card .contentbox .btn-buy{
+    position: relative;
+    text-decoration: none;
+    top: 170px;
+    opacity: 0;
+    padding: 10px 30px;
+    margin-top: 25px;
+    color: black;
+    background-color: #a5d3f1;
+    border-radius: 30px;
+    transition: 0.5s;
+    font-size: 1rem;
+}
+.card:hover .contentbox .btn-buy{
+    opacity: 1;
+    top: 0;
+}
+
